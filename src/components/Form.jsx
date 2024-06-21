@@ -4,6 +4,7 @@ import { Select } from "@headlessui/react";
 const Form = ({ onAgeSubmit, setGender, setShowAlert }) => {
   const [age, setAge] = useState("");
   
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +14,7 @@ const Form = ({ onAgeSubmit, setGender, setShowAlert }) => {
       setShowAlert("success");
 
       onAgeSubmit(age);
-      setGender(gender);
+      
     }
   };
 

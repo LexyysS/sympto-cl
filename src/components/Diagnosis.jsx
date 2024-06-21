@@ -1,5 +1,5 @@
 const Diagnosis = ({ diagnosis }) => {
-  console.log(diagnosis)
+  
   return (
     <div className="w-full h-full ">
       {diagnosis && (

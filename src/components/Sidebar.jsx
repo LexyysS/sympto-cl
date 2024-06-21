@@ -19,7 +19,7 @@ const Sidebar = () => {
 
       >
         <span><ClipboardDocumentCheckIcon className="w-6 h-6 shrink-0"/></span>
-        <small class="text-center text-xs font-medium"> Sintomas </small>
+        <small class="text-center text-xs font-medium"> Síntomas </small>
       </Link>
 
       <Link

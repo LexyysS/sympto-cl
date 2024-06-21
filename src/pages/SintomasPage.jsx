@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Alert from "../components/Alert";
 import SymptomsList from "../components/SymptomsList";
 import { getSymptoms, getDiagnosis } from "../infermedicaAPI";
@@ -8,7 +8,7 @@ import UserSymptomsList from "../components/UserSymptomsList";
 
 const Sintomas = () => {
   const [age, setAge] = useState(0);
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("male");
 
 
   const [isValid, setIsValid] = useState(false);
@@ -52,14 +52,14 @@ const Sintomas = () => {
       )}
       <header className=" w-full h-16 flex justify-center items-center mb-5">
         <h1 className="text-4xl font-oxygen font-bold text-black text-center mt-5  text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-500 ">
-          Sintomas de enfermedades
+          Síntomas de enfermedades
         </h1>
       </header>
 
-      <main className="max-w-6xl mx-28 h-screen md:min-h-screen p-5 flex flex-col  gap-1">
+      <main className="max-w-6xl mx-auto min-h-screen p-5 flex flex-col  gap-1">
 
         {!age && (
-          <div className=" w-1/2 h-[50vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg bg-white flex items-center p-5 ">
+          <div className=" w-full md:w-1/2 h-[50vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg bg-white flex items-center p-5 ">
           <Form onAgeSubmit={handleAgeSubmit} setGender={setGender} setShowAlert={setShowAlert} />
           
         </div>
@@ -77,15 +77,15 @@ const Sintomas = () => {
 
         {symptoms.length > 0 && (
           <>
-            <div className="w-full h-full mt-5 flex gap-1">
-              <div className="w-1/2 h-full p-5 ">
+            <div className="w-full h-full mt-5 flex md:flex-row flex-col gap-1">
+              <div className="w-full md:w-1/2 h-full p-5 ">
                 <SymptomsList
                   symptoms={symptoms}
                   onSymptomSelect={handleSymptomSelect}
                 />
               </div>
 
-              <div className="w-1/2 h-full  p-5 rounded-lg ">
+              <div className="w-full md:w-1/2 h-full  p-5 rounded-lg ">
                 <h2 className="font-bold text-2xl mb-5">Lista de sintomas</h2>
                 <UserSymptomsList listSymptoms={listSymptoms} />
                 <button
@@ -99,7 +99,7 @@ const Sintomas = () => {
               </div>
             </div>
 
-            <div className="w-full h-full p-5 mt-5 rounded-lg ">
+            <div className="w-full  p-5 mt-5 rounded-lg ">
               {isValid ? (
                 <Diagnosis diagnosis={diagnosis} />
               ) : (

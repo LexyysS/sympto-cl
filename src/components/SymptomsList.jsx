@@ -14,7 +14,7 @@ const SymptomsList = ({ symptoms, onSymptomSelect }) => {
 
   return (
     <div className="w-full h-full ">
-      <h2 className="font-bold text-2xl mb-5 ">Selecciona los sintomas</h2>
+      <h2 className="font-bold text-2xl mb-5 ">Selecciona los síntomas</h2>
       <div className="w-full flex gap-2 ">
         <input
           type="text"
