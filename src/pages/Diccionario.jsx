@@ -1,12 +1,21 @@
+import ModalC from "../components/Modal";
 import { useEffect , useState} from "react";
 
 
-const Diccionario = () => {
+const Diccionario = ({setOpen}) => {
 
   const [data, setData] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filtered, setFiltered] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+
+  const [select, setSelect] = useState({});
+
+  const handleOpenModal = (enfermedad) => {
+    setSelect(enfermedad);
+    setOpenModal(true);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +32,9 @@ const Diccionario = () => {
     };
 
     fetchData();
+
+    setOpen("diccionario");
+
 }, []);
 
 useEffect(() => {
@@ -57,14 +69,15 @@ useEffect(() => {
         </form>
 
 
-           <div className="w-full h-full flex flex-wrap overflow-y-auto gap-2" >
+           <div className="w-full h-full flex flex-col overflow-y-auto gap-2 mt-5 pb-5 transition-all" >
               {filtered.map((item) => (
-                <div key={item.titulo} className="p-5 bg-white rounded-lg shadow-sm">
-                  <h1>{item.titulo}</h1>
+                <div key={item.titulo} className="p-5 bg-white rounded-lg shadow-sm cursor-pointer hover:bg-slate-200" onClick={() => handleOpenModal(item)} >
+                  <h2 >{item.titulo}</h2>
                 </div>
               ))}
-            </div>   
-          {}
+            </div>  
+
+          {openModal && <ModalC openModal={openModal} setOpenModal={setOpenModal} enfermedad={select} />}
 
        
       </main>

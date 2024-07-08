@@ -40,7 +40,7 @@ const Form = ({ onAgeSubmit, setGender, setShowAlert }) => {
           className="block text-gray-700 text-xl font-bold mb-2"
           htmlFor="username"
         >
-          Genero
+          Sexo
         </label>
         <Select
           name="gender"

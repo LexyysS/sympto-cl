@@ -2,7 +2,7 @@ import React from "react";
 
 const UserSymptomsList = ({ listSymptoms }) => {
   return (
-    <ul className="w-full h-[50vh] overflow-y-auto">
+    <ul className="w-full h-[60vh] overflow-y-auto">
       {listSymptoms.map((symptom) => (
         <li
           key={symptom}

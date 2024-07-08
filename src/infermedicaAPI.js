@@ -14,10 +14,6 @@ const api = axios.create({
 });
 
 
-export const getInfo = async () => {
-    const response = await api.get('info');
-    console.log(response)
-}
 
 export const getSymptoms = async (age) => {
     const response = await api.get(`symptoms?age.value=${age}&age.unit=year`);
@@ -38,7 +34,3 @@ export const getSymptoms = async (age) => {
     return response.data;
   };
 
-export const searchSymptoms = async (query) => {
-  const response = await api.get('search', { params: { phrase: query } });
-  return response.data;
-};

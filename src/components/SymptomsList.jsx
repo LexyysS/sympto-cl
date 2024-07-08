@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-const SymptomsList = ({ symptoms, onSymptomSelect }) => {
+const SymptomsList = ({ symptoms, onSymptomSelect , listSymptoms }) => {
   const [filteredSymptoms, setFilteredSymptoms] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
@@ -33,6 +33,7 @@ const SymptomsList = ({ symptoms, onSymptomSelect }) => {
               <input
                 type="checkbox"
                 value={symptom.id}
+                checked={listSymptoms.includes(symptom.name)}
                 onChange={(e) =>
                   onSymptomSelect(symptom.name , e.target.value, e.target.checked)
                 }

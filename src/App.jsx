@@ -1,7 +1,7 @@
 import Sidebar from "./components/Sidebar"
 import Sintomas from "./pages/SintomasPage"
 import Diccionario from "./pages/Diccionario"
-import GPS from "./pages/GPS"
+
 import { useEffect, useState } from "react"
 
 import { Route, Routes } from "react-router-dom"
@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar"
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
+  const [open, setOpen] = useState("sintomas");
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -23,12 +23,12 @@ function App() {
 
   return (
     <>
-      {isMobile ? <NavBar /> : <Sidebar/>}
+      {isMobile ? <NavBar open={open} setOpen={setOpen}/> : <Sidebar open={open} setOpen={setOpen}/>}
       
       <Routes>
-        <Route path="/" element={<Sintomas/>} />
-        <Route path="/diccionario" element={<Diccionario/>} />
-        <Route path="/gps" element={<GPS/>} />
+        <Route path="/" element={<Sintomas setOpen={setOpen}/>} />
+        <Route path="/diccionario" element={<Diccionario setOpen={setOpen}/>} />
+        
   
 
       </Routes>
