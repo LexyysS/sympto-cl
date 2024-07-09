@@ -2,7 +2,7 @@
 
 Aplicacion web de sintomas de enfermedades y diccionario.
 
--  Lo cual permite hacer un diagnostico de enfermedades de acuerdo a los sintomas presenciados, ademas de involucrar preguntas al igual que una consulta medica para
+-  Permite hacer un diagnostico de las posibles enfermedades de acuerdo a los sintomas ingresados, ademas de involucrar preguntas al igual que una consulta medica para
   mayor precision de los resultados.
 
 - Diccionario de enfermedades detallando informacion tales como causas, prevencion, tratamientos, entre otros.
