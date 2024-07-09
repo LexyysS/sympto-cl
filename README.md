@@ -1,4 +1,4 @@
-# React + Vite + TailwindCSS + React Router 
+# SymptoCL | React + Vite + TailwindCSS + React Router 
 
 Aplicacion web de sintomas de enfermedades y diccionario.
 
@@ -13,3 +13,4 @@ Aplicacion web de sintomas de enfermedades y diccionario.
 <img width="1440" alt="Captura de pantalla 2024-07-08 a las 2 08 32 p  m" src="https://github.com/LexyysS/sympto-cl/assets/73967017/9643b3ec-539f-44ea-a8a8-3cb7224b1b5f">
 <img width="1440" alt="Captura de pantalla 2024-07-08 a las 2 09 02 p  m" src="https://github.com/LexyysS/sympto-cl/assets/73967017/55363d5d-b1c2-4369-a28d-863a22031ebe">
 
+<img width="1440" alt="Captura de pantalla 2024-07-08 a las 2 10 41 p  m" src="https://github.com/LexyysS/sympto-cl/assets/73967017/2e015f5d-f00f-44ff-bf1c-e2152fd9a9b5">
